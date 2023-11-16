@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function index(Request $request)
     {
-        $posts = Post::with(['author'])->paginate(10);
+        $posts = Post::with(['author'])->paginate();
         return new PostCollection($posts);
     }
 
@@ -36,16 +36,12 @@ class PostController extends Controller
 
     public function store(PostStoreRequest $request)
     {
-        $data = $request->validated();
-        return new PostResource(Post::create($data));
+        return new PostResource(Post::create($request->all()));
     }
 
     public function update(PostUpdateRequest $request, $id)
     {
-        $data = $request->validated();
-        $data = array_filter($data);
-        Post::where('id', $id)->update($data);
-        return response()->json(['message'=>'Post actualizado']);
+        return new PostResource(Post::where('id', $id)->update($request->all()));
     }
 
     public function destroy($id)

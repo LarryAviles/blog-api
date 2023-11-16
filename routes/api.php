@@ -2,8 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,15 +21,24 @@ use App\Http\Controllers\CommentController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 /* Authors Routes */
-Route::get('authors', [PostController::class, 'index']);
+Route::get('authors', [AuthorController::class, 'index']);
+Route::get('author/{id}', [AuthorController::class, 'show']);
+Route::post('author/store', [RegisteredUserController::class, 'store']);
+Route::post('author/{id}/update', [AuthorController::class, 'update']);
+Route::post('author/{id}/destroy', [AuthorController::class, 'destroy']);
+
 /* Posts Routes */
 Route::get('posts', [PostController::class, 'index']);
 Route::get('posts/search', [PostController::class, 'search']);
-Route::get('posts/{id}', [PostController::class, 'show']);
+Route::get('post/{id}', [PostController::class, 'show']);
 Route::post('post/store', [PostController::class, 'store']);
 Route::post('post/{id}/update', [PostController::class, 'update']);
+Route::post('post/{id}/destroy', [PostController::class, 'destroy']);
 
 /* Comments Routes */
 Route::get('comments', [CommentController::class, 'index']);
 Route::post('comments/export', [CommentController::class, 'export']);
+Route::post('comment/store', [CommentController::class, 'store']);
+Route::post('comment/{id}/destroy', [CommentController::class, 'destroy']);
