@@ -52,5 +52,6 @@ php artisan serve
 ```
 Client:
 ```
+php artisan key:generate
 php artisan serve --port=8001
 ```
