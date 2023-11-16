@@ -10,6 +10,7 @@ La prueba se divide en dos proyectos: "blog-api" y "blog-client". Opté por esta
 
 Además, se debe crear una base de datos en MySQL llamada "blog-api" y realizar las migraciones en ese proyecto para visualizar las publicaciones, autores y sus comentarios.
 
+Aqui esta el repositorio del proyecto de client: https://github.com/LarryAviles/blog-client
 ## Instalación:
 API:
 ```
@@ -54,4 +55,36 @@ Client:
 ```
 php artisan key:generate
 php artisan serve --port=8001
+```
+
+## Endpoints
+
+Posts:
+
+```
+All -> /api/posts
+Search -> /api/posts/search 
+Show -> /api/post/{id}
+Store -> /api/post/store 
+Update -> /api/post/{id}/update
+Remove -> /api/post/{id}/destroy
+```
+
+Autores:
+
+```
+All -> /api/authors
+Show -> /api/author/{id}
+Store -> /api/author/store 
+Update -> /api/author/{id}/update
+Remove -> /api/author/{id}/destroy
+```
+
+Comentarios:
+
+```
+All -> /api/comments
+Export -> /api/comments/export
+Store -> /api/comment/store 
+Remove -> /api/comment/{id}/destroy
 ```
