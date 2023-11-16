@@ -16,14 +16,12 @@ API:
 git clone https://github.com/LarryAviles/blog-api.git
 cd blog-api
 composer install
-
 ```
 Client:
 ```
 git clone https://github.com/LarryAviles/blog-client.git
 cd blog-client
 composer install
-
 ```
 
 ## Configuración del .env:
@@ -38,13 +36,11 @@ DB_PASSWORD=
 
 al final del .env agregar:
 SANCTUM_STATEFUL_DOMAINS="*"
-
 ```
 Client:
 ```
 al final del .env agregar:
 URL_SERVER_API="http://127.0.0.1:8000/api"
-
 ```
 
 ## Pasos finales:
@@ -53,10 +49,8 @@ API:
 php artisan migrate --seed
 php artisan key:generate
 php artisan serve
-
 ```
 Client:
 ```
 php artisan serve --port=8001
-
 ```
