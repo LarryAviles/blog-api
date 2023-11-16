@@ -4,6 +4,8 @@ Mi experiencia con esta prueba fue sumamente enriquecedora, ya que adquirí nuev
 
 En el inicio del proyecto, utilicé Laravel Breeze para gestionar la autenticación del backend. Conecté los métodos necesarios al frontend, lo que resultó en la no utilización de todos los puntos finales del inicio de sesión. A lo largo del desarrollo, enfrenté varios desafíos debido a mi habitual práctica de trabajar en un solo proyecto. Sin embargo, en esta ocasión, decidí explorar la opción de dividir el trabajo en dos repositorios para consumir los datos de la API en formato JSON. Esta elección resultó ser una experiencia gratificante.
 
+Aunque no pude completar todas las adiciones que tenía previstas para el proyecto debido a limitaciones de tiempo, así como algunos problemas pendientes, principalmente en la gestión de usuarios, también noté la necesidad de incorporar más validaciones en la interfaz para prevenir posibles errores relacionados con la ausencia de ciertos datos.
+
 ## Como funciona?:
 
 La prueba se divide en dos proyectos: "blog-api" y "blog-client". Opté por esta estructura para evaluar los endpoints en un proyecto separado. Al configurar los servidores locales, es esencial tener en cuenta que "blog-api" se ejecutará en el puerto 8000 y "blog-client" en el puerto 8001, mediante el comando "php artisan serve --port=8001".
