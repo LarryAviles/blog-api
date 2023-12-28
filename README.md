@@ -1,9 +1,4 @@
-# Prueba técnica PHP/Laravel
-
-Mi experiencia con esta prueba fue sumamente enriquecedora, ya que adquirí nuevos conocimientos relacionados con el uso de las RestAPI. Inicialmente, me embarqué en un solo proyecto, pero con el tiempo opté por la implementación de dos proyectos distintos, separando así la API y el cliente. Esta elección permitió destacar con mayor claridad la atención dedicada al desarrollo del backend.
-
-En el inicio del proyecto, utilicé Laravel Breeze para gestionar la autenticación del backend. Conecté los métodos necesarios al frontend, lo que resultó en la no utilización de todos los puntos finales del inicio de sesión. A lo largo del desarrollo, enfrenté varios desafíos debido a mi habitual práctica de trabajar en un solo proyecto. Sin embargo, en esta ocasión, decidí explorar la opción de dividir el trabajo en dos repositorios para consumir los datos de la API en formato JSON. Esta elección resultó ser una experiencia gratificante.
-
+# Blog PHP/Laravel
 ## Funcionalidad
 
 La prueba se divide en dos proyectos: "blog-api" y "blog-client". Opté por esta estructura para evaluar los endpoints en un proyecto separado. Al configurar los servidores locales, es esencial tener en cuenta que "blog-api" se ejecutará en el puerto 8000 y "blog-client" en el puerto 8001, mediante el comando "php artisan serve --port=8001".
