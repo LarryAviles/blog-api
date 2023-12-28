@@ -20,7 +20,7 @@ class PostResource extends JsonResource
             'title' => $this->title,
             'body' => $this->body,
             'created_at' => $this->created_at->diffForHumans(),
-            'author' => $this->whenLoaded('author', function(){
+            'author' => $this->whenLoaded('author', function () {
                 return new UserResource($this->author);
             }),
             'comments' => CommentResource::collection($this->whenLoaded('comments'))

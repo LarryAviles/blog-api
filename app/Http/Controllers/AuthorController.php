@@ -10,7 +10,8 @@ use App\Http\Resources\UserResource;
 
 class AuthorController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $authors = User::with(['posts','comments'])->paginate();
         return new UserCollection($authors);
     }
@@ -34,6 +35,6 @@ class AuthorController extends Controller
     public function destroy($id)
     {
         User::where('id', $id)->delete();
-        return response()->json(['message'=>'Autor eliminado']);
+        return response()->json(['message' => 'Autor eliminado']);
     }
 }

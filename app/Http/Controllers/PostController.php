@@ -47,7 +47,7 @@ class PostController extends Controller
     public function destroy($id)
     {
         Post::where('id', $id)->delete();
-        return response()->json(['message'=>'Post eliminado']);
+        return response()->json(['message' => 'Post eliminado']);
     }
 
 }

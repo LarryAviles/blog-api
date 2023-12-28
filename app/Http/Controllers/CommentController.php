@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Http\Resources\CommentCollection;
+use App\Http\Resources\CommentResource;
 use Google_Client;
 use Google_Service_Sheets;
 
@@ -29,7 +30,7 @@ class CommentController extends Controller
     public function destroy($id)
     {
         Comment::where('id', $id)->delete();
-        return response()->json(['message'=>'mensaje eliminado']);
+        return response()->json(['message' => 'mensaje eliminado']);
     }
 
     public function export(Request $request)
